@@ -14,7 +14,7 @@ let orders = [
     customerName: "Celia Dary",
     productName: "Bread - Pumpernickle, Rounds",
     productPrice: 10746,
-    productQuantity: 87,
+    productQuantity: 87,  
     creditCardType: "jcb",
   },
   {
@@ -86,3 +86,8 @@ let orders = [
 let birdiePurchasedAmount;
 
 // Start coding here
+for (let orderindex in orders){
+  if (orders[orderindex].customerName == "Birdie Shepland"){
+    console.log("Total price is " + orders[orderindex].productPrice * orders[orderindex].productQuantity)
+  }
+}

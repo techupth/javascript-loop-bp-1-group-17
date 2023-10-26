@@ -85,3 +85,9 @@ let orders = [
 
 const jcbOrders = [];
 // Start coding here
+for (let orderindex in orders){
+  if(orders[orderindex].creditCardType == "jcb" ){
+    jcbOrders.push(orders[orderindex])
+  }
+}
+console.log(jcbOrders)

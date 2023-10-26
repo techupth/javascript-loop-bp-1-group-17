@@ -10,7 +10,7 @@ let orders = [
     creditCardType: "solo",
   },
   {
-    id: 2,
+    id: 2,  
     customerName: "Celia Dary",
     productName: "Bread - Pumpernickle, Rounds",
     productPrice: 10746,
@@ -89,3 +89,11 @@ let maxPurchasedAmount;
 let maxPurchasedId;
 
 // Start coding here
+let index = 0
+let totalproductPrice = []
+for (let index in orders){
+    totalproductPrice.push(orders[index].productPrice * orders[index].productQuantity)};
+for (let productPriceindex = 0; productPriceindex < totalproductPrice.length-1 ; productPriceindex++ ){
+      if (totalproductPrice[productPriceindex] > totalproductPrice[productPriceindex+1]){
+        index = productPriceindex}}
+console.log("Order id: " + (index + 1) +  ", Total Price : " + totalproductPrice[index])
